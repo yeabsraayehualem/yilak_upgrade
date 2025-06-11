@@ -4,7 +4,10 @@
     'category': 'Sales',
     'summary': 'Add approval and voiding features to Sales module in Odoo 17',
     'depends': ['sale_management'],
-    'data': [],
+    'data': [
+        'security/security.xml',
+        'security/ir.model.access.csv',
+    ],
     'installable': True,
     'application': False,
     'auto_install': False,
