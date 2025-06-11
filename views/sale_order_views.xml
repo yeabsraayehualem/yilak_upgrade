@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_order_form_custom" model="ir.ui.view">
+        <field name="name">sale.order.form.custom</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <!-- Add Approval State to Header -->
+            <field name="state" position="attributes">
+                <attribute name="statusbar_visible">draft,waiting_approval,approved,sale,sent</attribute>
+            </field>
+            <!-- Add the approval_requested field to the view -->
+            <sheet position="inside">
+                <field name="approval_requested" invisible="1"/>
+            </sheet>
+            <!-- Add Request Approval and Approve Buttons -->
+            <header position="inside">
+                <button
+                    name="action_request_approval"
+                    string="Request Approval"
+                    type="object"
+                    class="oe_highlight"
+                    invisible="state != 'draft' or approval_requested"
+                />
+                <button
+                    name="action_approve"
+                    string="Approve"
+                    type="object"
+                    class="oe_highlight"
+                    groups="custom_sale_approval_void.group_sales_approval_manager"
+                    invisible="state != 'waiting_approval'"
+                />
+            </header>
+        </field>
+    </record>
+</odoo>
