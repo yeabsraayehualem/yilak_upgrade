@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_plan,purchase.order.plan,model_purchase_order_plan,,1,1,1,1
+access_plan_line,purchase.order.plan.line,model_purchase_order_plan_line,,1,1,1,1
+access_plan_line_product,purchase.order.plan.line.product,model_purchase_order_plan_line_product,,1,1,1,1
+access_wizard_lines,create.planned.lines,model_create_planned_lines,,1,1,1,1
+access_wizard_lines_prod,create.planned.lines.product,model_create_planned_lines_product,,1,1,1,1
+access_wizard_convert,convert.to.po,model_convert_to_po,,1,1,1,1

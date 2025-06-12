@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  
+  <record id="action_create_planned_lines" model="ir.actions.act_window">
+    <field name="name">Create Planned Lines</field>
+    <field name="res_model">create.planned.lines</field>
+    <field name="view_mode">form</field>
+    <field name="target">new</field>
+    <field name="context">{'default_plan_id': active_id}</field>
+  </record>
+
+ 
+  <record id="view_create_planned_lines_form" model="ir.ui.view">
+    <field name="name">create.planned.lines.form</field>
+    <field name="model">create.planned.lines</field>
+    <field name="arch" type="xml">
+      <form string="Create Planned Lines">
+        <sheet>
+          <group>
+            <field name="plan_id" invisible="1"/>
+            <field name="round_name"/>
+            <field name="vendor_id"/>
+            <field name="currency_id"/>
+            <field name="exchange_rate"/>
+            <field name="container_qty"/>
+            <field name="scheduled_date"/>
+          </group>
+          <group string="Products">
+            <field name="product_line_ids">
+              <tree editable="bottom">
+                <field name="product_id"/>
+                <field name="product_qty"/>
+                <field name="price_unit"/>
+              </tree>
+            </field>
+          </group>
+        </sheet>
+        <footer>
+          <button string="Create" name="action_create" type="object" class="btn-primary"/>
+          <button string="Cancel" special="cancel" class="btn-secondary"/>
+        </footer>
+      </form>
+    </field>
+  </record>
+</odoo>
