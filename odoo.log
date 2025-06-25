@@ -142,3 +142,477 @@ ModuleNotFoundError: No module named 'odoo.addons.web'
 2025-06-25 11:29:18,577 22772 DEBUG ? odoo.service.server: process <Thread(odoo.service.cron.cron1, started daemon 17304)> (True) 
 2025-06-25 11:29:18,577 22772 INFO ? odoo.sql_db: ConnectionPool(used=0/count=0/max=64): Closed 2 connections  
 2025-06-25 11:29:18,578 22772 DEBUG ? odoo.service.server: -- 
+2025-06-25 14:27:05,987 25236 DEBUG ? odoo.netsvc: logger level set: "odoo.http.rpc.request:INFO" 
+2025-06-25 14:27:06,004 25236 DEBUG ? odoo.netsvc: logger level set: "odoo.http.rpc.response:INFO" 
+2025-06-25 14:27:06,004 25236 DEBUG ? odoo.netsvc: logger level set: ":INFO" 
+2025-06-25 14:27:06,004 25236 DEBUG ? odoo.netsvc: logger level set: "odoo:DEBUG" 
+2025-06-25 14:27:06,004 25236 DEBUG ? odoo.netsvc: logger level set: "odoo.sql_db:INFO" 
+2025-06-25 14:27:06,005 25236 DEBUG ? odoo.netsvc: logger level set: ":INFO" 
+2025-06-25 14:27:06,008 25236 WARNING ? py.warnings: D:\odoo17\odoo-17\odoo\tools\config.py:576: DeprecationWarning: The longpolling-port is a deprecated alias to the gevent-port option, please use the latter.
+  File "D:\odoo17\odoo-17\odoo-bin", line 8, in <module>
+    odoo.cli.main()
+  File "D:\odoo17\odoo-17\odoo\cli\command.py", line 66, in main
+    o.run(args)
+  File "D:\odoo17\odoo-17\odoo\cli\server.py", line 186, in run
+    main(args)
+  File "D:\odoo17\odoo-17\odoo\cli\server.py", line 133, in main
+    odoo.tools.config.parse_config(args)
+  File "D:\odoo17\odoo-17\odoo\tools\config.py", line 390, in parse_config
+    self._warn_deprecated_options()
+  File "D:\odoo17\odoo-17\odoo\tools\config.py", line 576, in _warn_deprecated_options
+    warnings.warn(
+ 
+2025-06-25 14:27:06,010 25236 INFO ? odoo: Odoo version 17.0 
+2025-06-25 14:27:06,010 25236 INFO ? odoo: Using configuration file at D:\odoo17\odoo-17\conf\odoo.conf 
+2025-06-25 14:27:06,010 25236 INFO ? odoo: addons paths: ['D:\\odoo17\\odoo-17\\odoo\\addons', 'c:\\users\\hp\\appdata\\local\\openerp s.a\\odoo\\addons\\17.0', 'd:\\odoo17\\odoo-17\\conf\\custom_modules\\custom_sale_approval_void\\addons', 'd:\\odoo17\\odoo-17\\conf\\custom_modules\\custom_sale_approval_void\\conf\\custom_modules', 'd:\\odoo17\\odoo-17\\odoo\\addons'] 
+2025-06-25 14:27:06,011 25236 INFO ? odoo: database: odoo_user@localhost:5432 
+2025-06-25 14:27:07,182 25236 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf.exe 
+2025-06-25 14:27:07,779 25236 CRITICAL ? odoo.modules.module: Couldn't load module web 
+2025-06-25 14:27:07,779 25236 ERROR ? odoo.service.server: Failed to load server-wide module `web`.
+The `web` module is provided by the addons found in the `openerp-web` project.
+Maybe you forgot to add those addons in your addons_path configuration. 
+Traceback (most recent call last):
+  File "D:\odoo17\odoo-17\odoo\service\server.py", line 1310, in load_server_wide_modules
+    odoo.modules.module.load_openerp_module(m)
+  File "D:\odoo17\odoo-17\odoo\modules\module.py", line 395, in load_openerp_module
+    __import__(qualname)
+ModuleNotFoundError: No module named 'odoo.addons.web'
+2025-06-25 14:27:07,781 25236 DEBUG ? odoo.service.server: Setting signal handlers 
+2025-06-25 14:27:07,786 25236 DEBUG ? odoo.service.server: cron0 started! 
+2025-06-25 14:27:07,788 25236 DEBUG ? odoo.service.server: cron1 started! 
+2025-06-25 14:27:07,814 25236 INFO ? odoo.service.server: HTTP service (werkzeug) running on SoloAk-Envy:8069 
+2025-06-25 14:27:10,444 25236 DEBUG ? odoo.http: HTTP sessions stored in: c:\users\hp\appdata\local\openerp s.a\odoo\sessions 
+2025-06-25 14:27:10,616 25236 DEBUG ? odoo.modules.registry: Multiprocess load registry signaling: [Registry: 23] [Cache default: 5] [Cache assets: 1] [Cache templates: 1] [Cache routing: 1] 
+2025-06-25 14:27:10,635 25236 INFO ? odoo.modules.loading: loading 1 modules... 
+2025-06-25 14:27:10,635 25236 DEBUG ? odoo.modules.loading: Loading module base (1/1) 
+2025-06-25 14:27:10,649 25236 DEBUG ? odoo.modules.loading: Module base loaded in 0.01s, 0 queries 
+2025-06-25 14:27:10,650 25236 INFO ? odoo.modules.loading: 1 modules loaded in 0.02s, 0 queries (+0 extra) 
+2025-06-25 14:27:10,653 25236 DEBUG ? odoo.modules.module: module mail: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:27:10,683 25236 WARNING ? odoo.modules.graph: module mail: not installable, skipped 
+2025-06-25 14:27:10,684 25236 DEBUG ? odoo.modules.module: module auth_totp_portal: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:27:10,684 25236 WARNING ? odoo.modules.graph: module auth_totp_portal: not installable, skipped 
+2025-06-25 14:27:10,685 25236 DEBUG ? odoo.modules.module: module sale_async_emails: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:27:10,685 25236 WARNING ? odoo.modules.graph: module sale_async_emails: not installable, skipped 
+2025-06-25 14:27:10,685 25236 DEBUG ? odoo.modules.module: module spreadsheet_account: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:27:10,685 25236 WARNING ? odoo.modules.graph: module spreadsheet_account: not installable, skipped 
+2025-06-25 14:27:10,686 25236 DEBUG ? odoo.modules.module: module sms: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:27:10,686 25236 WARNING ? odoo.modules.graph: module sms: not installable, skipped 
+2025-06-25 14:27:10,688 25236 DEBUG ? odoo.modules.module: module sale_product_configurator: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:27:10,688 25236 WARNING ? odoo.modules.graph: module sale_product_configurator: not installable, skipped 
+2025-06-25 14:27:10,688 25236 DEBUG ? odoo.modules.module: module sale_pdf_quote_builder: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:27:10,688 25236 WARNING ? odoo.modules.graph: module sale_pdf_quote_builder: not installable, skipped 
+2025-06-25 14:27:10,688 25236 DEBUG ? odoo.modules.module: module base_vat: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:27:10,688 25236 WARNING ? odoo.modules.graph: module base_vat: not installable, skipped 
+2025-06-25 14:27:10,690 25236 DEBUG ? odoo.modules.module: module l10n_et: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:27:10,690 25236 WARNING ? odoo.modules.graph: module l10n_et: not installable, skipped 
+2025-06-25 14:27:10,690 25236 DEBUG ? odoo.modules.module: module google_gmail: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:27:10,690 25236 WARNING ? odoo.modules.graph: module google_gmail: not installable, skipped 
+2025-06-25 14:27:10,691 25236 DEBUG ? odoo.modules.module: module stock_sms: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:27:10,691 25236 WARNING ? odoo.modules.graph: module stock_sms: not installable, skipped 
+2025-06-25 14:27:10,692 25236 DEBUG ? odoo.modules.module: module sale_stock: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:27:10,692 25236 WARNING ? odoo.modules.graph: module sale_stock: not installable, skipped 
+2025-06-25 14:27:10,693 25236 DEBUG ? odoo.modules.module: module sale_management: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:27:10,693 25236 WARNING ? odoo.modules.graph: module sale_management: not installable, skipped 
+2025-06-25 14:27:10,694 25236 DEBUG ? odoo.modules.module: module portal: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:27:10,694 25236 WARNING ? odoo.modules.graph: module portal: not installable, skipped 
+2025-06-25 14:27:10,694 25236 DEBUG ? odoo.modules.module: module phone_validation: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:27:10,694 25236 WARNING ? odoo.modules.graph: module phone_validation: not installable, skipped 
+2025-06-25 14:27:10,695 25236 DEBUG ? odoo.modules.module: module snailmail: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:27:10,695 25236 WARNING ? odoo.modules.graph: module snailmail: not installable, skipped 
+2025-06-25 14:27:10,695 25236 DEBUG ? odoo.modules.module: module auth_signup: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:27:10,695 25236 WARNING ? odoo.modules.graph: module auth_signup: not installable, skipped 
+2025-06-25 14:27:10,696 25236 DEBUG ? odoo.modules.module: module bus: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:27:10,696 25236 WARNING ? odoo.modules.graph: module bus: not installable, skipped 
+2025-06-25 14:27:10,696 25236 DEBUG ? odoo.modules.module: module spreadsheet_dashboard_sale: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:27:10,697 25236 WARNING ? odoo.modules.graph: module spreadsheet_dashboard_sale: not installable, skipped 
+2025-06-25 14:27:10,697 25236 DEBUG ? odoo.modules.module: module iap: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:27:10,697 25236 WARNING ? odoo.modules.graph: module iap: not installable, skipped 
+2025-06-25 14:27:10,697 25236 DEBUG ? odoo.modules.module: module privacy_lookup: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:27:10,698 25236 WARNING ? odoo.modules.graph: module privacy_lookup: not installable, skipped 
+2025-06-25 14:27:10,698 25236 DEBUG ? odoo.modules.module: module spreadsheet_dashboard_stock_account: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:27:10,698 25236 WARNING ? odoo.modules.graph: module spreadsheet_dashboard_stock_account: not installable, skipped 
+2025-06-25 14:27:10,698 25236 DEBUG ? odoo.modules.module: module digest: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:27:10,699 25236 WARNING ? odoo.modules.graph: module digest: not installable, skipped 
+2025-06-25 14:27:10,699 25236 DEBUG ? odoo.modules.module: module delivery: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:27:10,699 25236 WARNING ? odoo.modules.graph: module delivery: not installable, skipped 
+2025-06-25 14:27:10,699 25236 DEBUG ? odoo.modules.module: module barcodes: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:27:10,700 25236 WARNING ? odoo.modules.graph: module barcodes: not installable, skipped 
+2025-06-25 14:27:10,700 25236 DEBUG ? odoo.modules.module: module web_unsplash: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:27:10,700 25236 WARNING ? odoo.modules.graph: module web_unsplash: not installable, skipped 
+2025-06-25 14:27:10,701 25236 DEBUG ? odoo.modules.module: module payment: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:27:10,701 25236 WARNING ? odoo.modules.graph: module payment: not installable, skipped 
+2025-06-25 14:27:10,701 25236 DEBUG ? odoo.modules.module: module custom_sale_approval_void: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:27:10,701 25236 WARNING ? odoo.modules.graph: module custom_sale_approval_void: not installable, skipped 
+2025-06-25 14:27:10,702 25236 DEBUG ? odoo.modules.module: module partner_autocomplete: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:27:10,702 25236 WARNING ? odoo.modules.graph: module partner_autocomplete: not installable, skipped 
+2025-06-25 14:27:10,702 25236 DEBUG ? odoo.modules.module: module stock_account: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:27:10,702 25236 WARNING ? odoo.modules.graph: module stock_account: not installable, skipped 
+2025-06-25 14:27:10,703 25236 DEBUG ? odoo.modules.module: module mail_bot: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:27:10,703 25236 WARNING ? odoo.modules.graph: module mail_bot: not installable, skipped 
+2025-06-25 14:27:10,704 25236 DEBUG ? odoo.modules.module: module snailmail_account: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:27:10,704 25236 WARNING ? odoo.modules.graph: module snailmail_account: not installable, skipped 
+2025-06-25 14:27:10,706 25236 DEBUG ? odoo.modules.module: module iap_mail: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:27:10,707 25236 WARNING ? odoo.modules.graph: module iap_mail: not installable, skipped 
+2025-06-25 14:27:10,707 25236 DEBUG ? odoo.modules.module: module http_routing: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:27:10,707 25236 WARNING ? odoo.modules.graph: module http_routing: not installable, skipped 
+2025-06-25 14:27:10,708 25236 DEBUG ? odoo.modules.module: module barcodes_gs1_nomenclature: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:27:10,708 25236 WARNING ? odoo.modules.graph: module barcodes_gs1_nomenclature: not installable, skipped 
+2025-06-25 14:27:10,709 25236 DEBUG ? odoo.modules.module: module resource: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:27:10,709 25236 WARNING ? odoo.modules.graph: module resource: not installable, skipped 
+2025-06-25 14:27:10,709 25236 DEBUG ? odoo.modules.module: module account_payment: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:27:10,709 25236 WARNING ? odoo.modules.graph: module account_payment: not installable, skipped 
+2025-06-25 14:27:10,710 25236 DEBUG ? odoo.modules.module: module stock: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:27:10,710 25236 WARNING ? odoo.modules.graph: module stock: not installable, skipped 
+2025-06-25 14:27:10,710 25236 DEBUG ? odoo.modules.module: module base_setup: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:27:10,710 25236 WARNING ? odoo.modules.graph: module base_setup: not installable, skipped 
+2025-06-25 14:27:10,711 25236 DEBUG ? odoo.modules.module: module stock_delivery: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:27:10,711 25236 WARNING ? odoo.modules.graph: module stock_delivery: not installable, skipped 
+2025-06-25 14:27:10,711 25236 DEBUG ? odoo.modules.module: module sale_sms: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:27:10,711 25236 WARNING ? odoo.modules.graph: module sale_sms: not installable, skipped 
+2025-06-25 14:27:10,712 25236 DEBUG ? odoo.modules.module: module web: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:27:10,712 25236 WARNING ? odoo.modules.graph: module web: not installable, skipped 
+2025-06-25 14:27:10,712 25236 DEBUG ? odoo.modules.module: module spreadsheet_dashboard: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:27:10,712 25236 WARNING ? odoo.modules.graph: module spreadsheet_dashboard: not installable, skipped 
+2025-06-25 14:27:10,713 25236 DEBUG ? odoo.modules.module: module spreadsheet_dashboard_account: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:27:10,713 25236 WARNING ? odoo.modules.graph: module spreadsheet_dashboard_account: not installable, skipped 
+2025-06-25 14:27:10,713 25236 DEBUG ? odoo.modules.module: module onboarding: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:27:10,713 25236 WARNING ? odoo.modules.graph: module onboarding: not installable, skipped 
+2025-06-25 14:27:10,714 25236 DEBUG ? odoo.modules.module: module utm: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:27:10,714 25236 WARNING ? odoo.modules.graph: module utm: not installable, skipped 
+2025-06-25 14:27:10,715 25236 DEBUG ? odoo.modules.module: module analytic: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:27:10,715 25236 WARNING ? odoo.modules.graph: module analytic: not installable, skipped 
+2025-06-25 14:27:10,715 25236 DEBUG ? odoo.modules.module: module base_install_request: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:27:10,715 25236 WARNING ? odoo.modules.graph: module base_install_request: not installable, skipped 
+2025-06-25 14:27:10,716 25236 DEBUG ? odoo.modules.module: module account: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:27:10,716 25236 WARNING ? odoo.modules.graph: module account: not installable, skipped 
+2025-06-25 14:27:10,716 25236 DEBUG ? odoo.modules.module: module auth_totp_mail: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:27:10,716 25236 WARNING ? odoo.modules.graph: module auth_totp_mail: not installable, skipped 
+2025-06-25 14:27:10,717 25236 DEBUG ? odoo.modules.module: module base_import: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:27:10,717 25236 WARNING ? odoo.modules.graph: module base_import: not installable, skipped 
+2025-06-25 14:27:10,717 25236 DEBUG ? odoo.modules.module: module quality_control_management: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:27:10,717 25236 WARNING ? odoo.modules.graph: module quality_control_management: not installable, skipped 
+2025-06-25 14:27:10,718 25236 DEBUG ? odoo.modules.module: module account_payment_term: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:27:10,718 25236 WARNING ? odoo.modules.graph: module account_payment_term: not installable, skipped 
+2025-06-25 14:27:10,718 25236 DEBUG ? odoo.modules.module: module account_edi_ubl_cii: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:27:10,718 25236 WARNING ? odoo.modules.graph: module account_edi_ubl_cii: not installable, skipped 
+2025-06-25 14:27:10,719 25236 DEBUG ? odoo.modules.module: module product: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:27:10,719 25236 WARNING ? odoo.modules.graph: module product: not installable, skipped 
+2025-06-25 14:27:10,720 25236 DEBUG ? odoo.modules.module: module sale: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:27:10,720 25236 WARNING ? odoo.modules.graph: module sale: not installable, skipped 
+2025-06-25 14:27:10,721 25236 DEBUG ? odoo.modules.module: module sales_team: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:27:10,721 25236 WARNING ? odoo.modules.graph: module sales_team: not installable, skipped 
+2025-06-25 14:27:10,722 25236 DEBUG ? odoo.modules.module: module uom: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:27:10,722 25236 WARNING ? odoo.modules.graph: module uom: not installable, skipped 
+2025-06-25 14:27:10,722 25236 DEBUG ? odoo.modules.module: module spreadsheet: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:27:10,722 25236 WARNING ? odoo.modules.graph: module spreadsheet: not installable, skipped 
+2025-06-25 14:27:10,723 25236 DEBUG ? odoo.modules.module: module auth_totp: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:27:10,723 25236 WARNING ? odoo.modules.graph: module auth_totp: not installable, skipped 
+2025-06-25 14:27:10,723 25236 DEBUG ? odoo.modules.module: module base_import_module: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:27:10,723 25236 WARNING ? odoo.modules.graph: module base_import_module: not installable, skipped 
+2025-06-25 14:27:10,724 25236 DEBUG ? odoo.modules.module: module web_tour: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:27:10,724 25236 WARNING ? odoo.modules.graph: module web_tour: not installable, skipped 
+2025-06-25 14:27:10,724 25236 DEBUG ? odoo.modules.module: module web_editor: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:27:10,724 25236 WARNING ? odoo.modules.graph: module web_editor: not installable, skipped 
+2025-06-25 14:27:10,725 25236 DEBUG ? odoo.modules.loading: Updating graph with 63 more modules 
+2025-06-25 14:27:10,725 25236 INFO ? odoo.modules.loading: loading 1 modules... 
+2025-06-25 14:27:10,726 25236 INFO ? odoo.modules.loading: 1 modules loaded in 0.00s, 0 queries (+0 extra) 
+2025-06-25 14:27:10,788 25236 ERROR ? odoo.modules.loading: Some modules are not loaded, some dependencies or manifest may be missing: ['account', 'account_edi_ubl_cii', 'account_payment', 'account_payment_term', 'analytic', 'auth_signup', 'auth_totp', 'auth_totp_mail', 'auth_totp_portal', 'barcodes', 'barcodes_gs1_nomenclature', 'base_import', 'base_import_module', 'base_install_request', 'base_setup', 'base_vat', 'bus', 'custom_sale_approval_void', 'delivery', 'digest', 'google_gmail', 'http_routing', 'iap', 'iap_mail', 'l10n_et', 'mail', 'mail_bot', 'onboarding', 'partner_autocomplete', 'payment', 'phone_validation', 'portal', 'privacy_lookup', 'product', 'quality_control_management', 'resource', 'sale', 'sale_async_emails', 'sale_management', 'sale_pdf_quote_builder', 'sale_product_configurator', 'sale_sms', 'sale_stock', 'sales_team', 'sms', 'snailmail', 'snailmail_account', 'spreadsheet', 'spreadsheet_account', 'spreadsheet_dashboard', 'spreadsheet_dashboard_account', 'spreadsheet_dashboard_sale', 'spreadsheet_dashboard_stock_account', 'stock', 'stock_account', 'stock_delivery', 'stock_sms', 'uom', 'utm', 'web', 'web_editor', 'web_tour', 'web_unsplash'] 
+2025-06-25 14:27:10,788 25236 INFO ? odoo.modules.loading: Modules loaded. 
+2025-06-25 14:27:10,799 25236 INFO ? odoo.modules.registry: Registry loaded in 0.352s 
+2025-06-25 14:27:10,802 25236 INFO odoo_dev odoo.addons.base.models.ir_http: Generating routing map for key None 
+2025-06-25 14:27:10,816 25236 INFO odoo_dev werkzeug: 127.0.0.1 - - [25/Jun/2025 14:27:10] "GET /web HTTP/1.1" 404 - 18 0.155 0.220
+2025-06-25 14:27:16,478 25236 INFO odoo_dev werkzeug: 127.0.0.1 - - [25/Jun/2025 14:27:16] "GET /web/service-worker.js HTTP/1.1" 404 - 2 0.003 0.008
+2025-06-25 14:27:24,807 25236 INFO odoo_dev werkzeug: 127.0.0.1 - - [25/Jun/2025 14:27:24] "GET / HTTP/1.1" 404 - 2 0.002 0.003
+2025-06-25 14:28:07,924 25236 DEBUG ? odoo.service.server: cron0 polling for jobs 
+2025-06-25 14:28:07,944 25236 DEBUG odoo_dev odoo.addons.base.models.ir_cron: job 7 acquired 
+2025-06-25 14:28:08,035 25236 DEBUG odoo_dev odoo.addons.base.models.ir_cron: cron.object.execute('odoo_dev', 1, '*', 'Notification: Send scheduled message notifications', 139) 
+2025-06-25 14:28:08,035 25236 INFO odoo_dev odoo.addons.base.models.ir_cron: Starting job `Notification: Send scheduled message notifications`. 
+2025-06-25 14:28:08,056 25236 ERROR odoo_dev odoo.addons.base.models.ir_cron: Call from cron Notification: Send scheduled message notifications for server action #139 failed in Job #7 
+Traceback (most recent call last):
+  File "D:\odoo17\odoo-17\odoo\addons\base\models\ir_cron.py", line 393, in _callback
+    self.env['ir.actions.server'].browse(server_action_id).run()
+  File "D:\odoo17\odoo-17\odoo\addons\base\models\ir_actions.py", line 918, in run
+    self.env[model_name].check_access_rights("write")
+    ~~~~~~~~^^^^^^^^^^^^
+  File "D:\odoo17\odoo-17\odoo\api.py", line 550, in __getitem__
+    return self.registry[model_name](self, (), ())
+           ~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "D:\odoo17\odoo-17\odoo\modules\registry.py", line 209, in __getitem__
+    return self.models[model_name]
+           ~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'mail.message.schedule'
+2025-06-25 14:28:08,115 25236 DEBUG odoo_dev odoo.addons.base.models.ir_cron: job 7 updated and released 
+2025-06-25 14:28:08,116 25236 DEBUG odoo_dev odoo.addons.base.models.ir_cron: job 3 acquired 
+2025-06-25 14:28:08,119 25236 DEBUG odoo_dev odoo.addons.base.models.ir_cron: cron.object.execute('odoo_dev', 1, '*', 'Mail: Email Queue Manager', 135) 
+2025-06-25 14:28:08,119 25236 INFO odoo_dev odoo.addons.base.models.ir_cron: Starting job `Mail: Email Queue Manager`. 
+2025-06-25 14:28:08,121 25236 ERROR odoo_dev odoo.addons.base.models.ir_cron: Call from cron Mail: Email Queue Manager for server action #135 failed in Job #3 
+Traceback (most recent call last):
+  File "D:\odoo17\odoo-17\odoo\addons\base\models\ir_cron.py", line 393, in _callback
+    self.env['ir.actions.server'].browse(server_action_id).run()
+  File "D:\odoo17\odoo-17\odoo\addons\base\models\ir_actions.py", line 918, in run
+    self.env[model_name].check_access_rights("write")
+    ~~~~~~~~^^^^^^^^^^^^
+  File "D:\odoo17\odoo-17\odoo\api.py", line 550, in __getitem__
+    return self.registry[model_name](self, (), ())
+           ~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "D:\odoo17\odoo-17\odoo\modules\registry.py", line 209, in __getitem__
+    return self.models[model_name]
+           ~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'mail.mail'
+2025-06-25 14:28:08,123 25236 DEBUG odoo_dev odoo.addons.base.models.ir_cron: job 3 updated and released 
+2025-06-25 14:28:08,124 25236 DEBUG odoo_dev odoo.addons.base.models.ir_cron: job 11 acquired 
+2025-06-25 14:28:08,126 25236 DEBUG odoo_dev odoo.addons.base.models.ir_cron: cron.object.execute('odoo_dev', 1, '*', 'Partner Autocomplete: Sync with remote DB', 199) 
+2025-06-25 14:28:08,126 25236 INFO odoo_dev odoo.addons.base.models.ir_cron: Starting job `Partner Autocomplete: Sync with remote DB`. 
+2025-06-25 14:28:08,128 25236 ERROR odoo_dev odoo.addons.base.models.ir_cron: Call from cron Partner Autocomplete: Sync with remote DB for server action #199 failed in Job #11 
+Traceback (most recent call last):
+  File "D:\odoo17\odoo-17\odoo\addons\base\models\ir_cron.py", line 393, in _callback
+    self.env['ir.actions.server'].browse(server_action_id).run()
+  File "D:\odoo17\odoo-17\odoo\addons\base\models\ir_actions.py", line 918, in run
+    self.env[model_name].check_access_rights("write")
+    ~~~~~~~~^^^^^^^^^^^^
+  File "D:\odoo17\odoo-17\odoo\api.py", line 550, in __getitem__
+    return self.registry[model_name](self, (), ())
+           ~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "D:\odoo17\odoo-17\odoo\modules\registry.py", line 209, in __getitem__
+    return self.models[model_name]
+           ~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'res.partner.autocomplete.sync'
+2025-06-25 14:28:08,130 25236 DEBUG odoo_dev odoo.addons.base.models.ir_cron: job 11 updated and released 
+2025-06-25 14:28:08,131 25236 DEBUG odoo_dev odoo.addons.base.models.ir_cron: job 12 acquired 
+2025-06-25 14:28:08,133 25236 DEBUG odoo_dev odoo.addons.base.models.ir_cron: cron.object.execute('odoo_dev', 1, '*', 'SMS: SMS Queue Manager', 203) 
+2025-06-25 14:28:08,133 25236 INFO odoo_dev odoo.addons.base.models.ir_cron: Starting job `SMS: SMS Queue Manager`. 
+2025-06-25 14:28:08,135 25236 ERROR odoo_dev odoo.addons.base.models.ir_cron: Call from cron SMS: SMS Queue Manager for server action #203 failed in Job #12 
+Traceback (most recent call last):
+  File "D:\odoo17\odoo-17\odoo\addons\base\models\ir_cron.py", line 393, in _callback
+    self.env['ir.actions.server'].browse(server_action_id).run()
+  File "D:\odoo17\odoo-17\odoo\addons\base\models\ir_actions.py", line 918, in run
+    self.env[model_name].check_access_rights("write")
+    ~~~~~~~~^^^^^^^^^^^^
+  File "D:\odoo17\odoo-17\odoo\api.py", line 550, in __getitem__
+    return self.registry[model_name](self, (), ())
+           ~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "D:\odoo17\odoo-17\odoo\modules\registry.py", line 209, in __getitem__
+    return self.models[model_name]
+           ~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'sms.sms'
+2025-06-25 14:28:08,136 25236 DEBUG odoo_dev odoo.addons.base.models.ir_cron: job 12 updated and released 
+2025-06-25 14:28:08,137 25236 DEBUG odoo_dev odoo.addons.base.models.ir_cron: job 13 acquired 
+2025-06-25 14:28:08,141 25236 DEBUG odoo_dev odoo.addons.base.models.ir_cron: cron.object.execute('odoo_dev', 1, '*', 'Snailmail: process letters queue', 213) 
+2025-06-25 14:28:08,141 25236 INFO odoo_dev odoo.addons.base.models.ir_cron: Starting job `Snailmail: process letters queue`. 
+2025-06-25 14:28:08,142 25236 ERROR odoo_dev odoo.addons.base.models.ir_cron: Call from cron Snailmail: process letters queue for server action #213 failed in Job #13 
+Traceback (most recent call last):
+  File "D:\odoo17\odoo-17\odoo\addons\base\models\ir_cron.py", line 393, in _callback
+    self.env['ir.actions.server'].browse(server_action_id).run()
+  File "D:\odoo17\odoo-17\odoo\addons\base\models\ir_actions.py", line 918, in run
+    self.env[model_name].check_access_rights("write")
+    ~~~~~~~~^^^^^^^^^^^^
+  File "D:\odoo17\odoo-17\odoo\api.py", line 550, in __getitem__
+    return self.registry[model_name](self, (), ())
+           ~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "D:\odoo17\odoo-17\odoo\modules\registry.py", line 209, in __getitem__
+    return self.models[model_name]
+           ~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'snailmail.letter'
+2025-06-25 14:28:08,143 25236 DEBUG odoo_dev odoo.addons.base.models.ir_cron: job 13 updated and released 
+2025-06-25 14:28:08,975 25236 DEBUG ? odoo.service.server: cron1 polling for jobs 
+2025-06-25 14:28:14,317 25236 INFO odoo_dev werkzeug: 127.0.0.1 - - [25/Jun/2025 14:28:14] "GET / HTTP/1.1" 404 - 2 0.001 0.005
+2025-06-25 14:28:16,858 25236 INFO ? odoo.service.server: Initiating shutdown 
+2025-06-25 14:28:16,859 25236 INFO ? odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2025-06-25 14:28:17,115 25236 DEBUG ? odoo.service.server: current thread: <_MainThread(MainThread, started 16888)> 
+2025-06-25 14:28:17,116 25236 DEBUG ? odoo.service.server: process <_MainThread(MainThread, started 16888)> (False) 
+2025-06-25 14:28:17,117 25236 DEBUG ? odoo.service.server: process <Thread(odoo.service.cron.cron0, started daemon 20252)> (True) 
+2025-06-25 14:28:17,117 25236 DEBUG ? odoo.service.server: process <Thread(odoo.service.cron.cron1, started daemon 26072)> (True) 
+2025-06-25 14:28:17,118 25236 INFO ? odoo.sql_db: ConnectionPool(used=0/count=0/max=64): Closed 5 connections  
+2025-06-25 14:28:17,118 25236 DEBUG ? odoo.service.server: -- 
+2025-06-25 14:28:21,335 27956 DEBUG ? odoo.netsvc: logger level set: "odoo.http.rpc.request:INFO" 
+2025-06-25 14:28:21,336 27956 DEBUG ? odoo.netsvc: logger level set: "odoo.http.rpc.response:INFO" 
+2025-06-25 14:28:21,336 27956 DEBUG ? odoo.netsvc: logger level set: ":INFO" 
+2025-06-25 14:28:21,336 27956 DEBUG ? odoo.netsvc: logger level set: "odoo:DEBUG" 
+2025-06-25 14:28:21,336 27956 DEBUG ? odoo.netsvc: logger level set: "odoo.sql_db:INFO" 
+2025-06-25 14:28:21,336 27956 DEBUG ? odoo.netsvc: logger level set: ":INFO" 
+2025-06-25 14:28:21,338 27956 WARNING ? py.warnings: D:\odoo17\odoo-17\odoo\tools\config.py:576: DeprecationWarning: The longpolling-port is a deprecated alias to the gevent-port option, please use the latter.
+  File "D:\odoo17\odoo-17\odoo-bin", line 8, in <module>
+    odoo.cli.main()
+  File "D:\odoo17\odoo-17\odoo\cli\command.py", line 66, in main
+    o.run(args)
+  File "D:\odoo17\odoo-17\odoo\cli\server.py", line 186, in run
+    main(args)
+  File "D:\odoo17\odoo-17\odoo\cli\server.py", line 133, in main
+    odoo.tools.config.parse_config(args)
+  File "D:\odoo17\odoo-17\odoo\tools\config.py", line 390, in parse_config
+    self._warn_deprecated_options()
+  File "D:\odoo17\odoo-17\odoo\tools\config.py", line 576, in _warn_deprecated_options
+    warnings.warn(
+ 
+2025-06-25 14:28:21,338 27956 INFO ? odoo: Odoo version 17.0 
+2025-06-25 14:28:21,338 27956 INFO ? odoo: Using configuration file at D:\odoo17\odoo-17\conf\odoo.conf 
+2025-06-25 14:28:21,338 27956 INFO ? odoo: addons paths: ['D:\\odoo17\\odoo-17\\odoo\\addons', 'c:\\users\\hp\\appdata\\local\\openerp s.a\\odoo\\addons\\17.0', 'd:\\odoo17\\odoo-17\\conf\\custom_modules\\custom_sale_approval_void\\addons', 'd:\\odoo17\\odoo-17\\conf\\custom_modules\\custom_sale_approval_void\\conf\\custom_modules', 'd:\\odoo17\\odoo-17\\odoo\\addons'] 
+2025-06-25 14:28:21,338 27956 INFO ? odoo: database: odoo_user@localhost:5432 
+2025-06-25 14:28:21,585 27956 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf.exe 
+2025-06-25 14:28:21,839 27956 CRITICAL ? odoo.modules.module: Couldn't load module web 
+2025-06-25 14:28:21,839 27956 ERROR ? odoo.service.server: Failed to load server-wide module `web`.
+The `web` module is provided by the addons found in the `openerp-web` project.
+Maybe you forgot to add those addons in your addons_path configuration. 
+Traceback (most recent call last):
+  File "D:\odoo17\odoo-17\odoo\service\server.py", line 1310, in load_server_wide_modules
+    odoo.modules.module.load_openerp_module(m)
+  File "D:\odoo17\odoo-17\odoo\modules\module.py", line 395, in load_openerp_module
+    __import__(qualname)
+ModuleNotFoundError: No module named 'odoo.addons.web'
+2025-06-25 14:28:21,840 27956 DEBUG ? odoo.service.server: Setting signal handlers 
+2025-06-25 14:28:21,842 27956 DEBUG ? odoo.service.server: cron0 started! 
+2025-06-25 14:28:21,844 27956 DEBUG ? odoo.service.server: cron1 started! 
+2025-06-25 14:28:21,853 27956 INFO ? odoo.service.server: HTTP service (werkzeug) running on SoloAk-Envy:8069 
+2025-06-25 14:28:27,920 27956 DEBUG ? odoo.http: HTTP sessions stored in: c:\users\hp\appdata\local\openerp s.a\odoo\sessions 
+2025-06-25 14:28:27,967 27956 DEBUG ? odoo.modules.registry: Multiprocess load registry signaling: [Registry: 23] [Cache default: 5] [Cache assets: 1] [Cache templates: 1] [Cache routing: 1] 
+2025-06-25 14:28:27,970 27956 INFO ? odoo.modules.loading: loading 1 modules... 
+2025-06-25 14:28:27,971 27956 DEBUG ? odoo.modules.loading: Loading module base (1/1) 
+2025-06-25 14:28:27,977 27956 DEBUG ? odoo.modules.loading: Module base loaded in 0.01s, 0 queries 
+2025-06-25 14:28:27,978 27956 INFO ? odoo.modules.loading: 1 modules loaded in 0.01s, 0 queries (+0 extra) 
+2025-06-25 14:28:27,979 27956 DEBUG ? odoo.modules.module: module mail: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:28:27,987 27956 WARNING ? odoo.modules.graph: module mail: not installable, skipped 
+2025-06-25 14:28:27,987 27956 DEBUG ? odoo.modules.module: module auth_totp_portal: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:28:27,988 27956 WARNING ? odoo.modules.graph: module auth_totp_portal: not installable, skipped 
+2025-06-25 14:28:27,988 27956 DEBUG ? odoo.modules.module: module sale_async_emails: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:28:27,988 27956 WARNING ? odoo.modules.graph: module sale_async_emails: not installable, skipped 
+2025-06-25 14:28:27,988 27956 DEBUG ? odoo.modules.module: module spreadsheet_account: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:28:27,988 27956 WARNING ? odoo.modules.graph: module spreadsheet_account: not installable, skipped 
+2025-06-25 14:28:27,989 27956 DEBUG ? odoo.modules.module: module sms: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:28:27,989 27956 WARNING ? odoo.modules.graph: module sms: not installable, skipped 
+2025-06-25 14:28:27,989 27956 DEBUG ? odoo.modules.module: module sale_product_configurator: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:28:27,989 27956 WARNING ? odoo.modules.graph: module sale_product_configurator: not installable, skipped 
+2025-06-25 14:28:27,989 27956 DEBUG ? odoo.modules.module: module sale_pdf_quote_builder: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:28:27,990 27956 WARNING ? odoo.modules.graph: module sale_pdf_quote_builder: not installable, skipped 
+2025-06-25 14:28:27,990 27956 DEBUG ? odoo.modules.module: module base_vat: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:28:27,990 27956 WARNING ? odoo.modules.graph: module base_vat: not installable, skipped 
+2025-06-25 14:28:27,991 27956 DEBUG ? odoo.modules.module: module l10n_et: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:28:27,991 27956 WARNING ? odoo.modules.graph: module l10n_et: not installable, skipped 
+2025-06-25 14:28:27,991 27956 DEBUG ? odoo.modules.module: module google_gmail: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:28:27,991 27956 WARNING ? odoo.modules.graph: module google_gmail: not installable, skipped 
+2025-06-25 14:28:27,991 27956 DEBUG ? odoo.modules.module: module stock_sms: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:28:27,992 27956 WARNING ? odoo.modules.graph: module stock_sms: not installable, skipped 
+2025-06-25 14:28:27,992 27956 DEBUG ? odoo.modules.module: module sale_stock: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:28:27,992 27956 WARNING ? odoo.modules.graph: module sale_stock: not installable, skipped 
+2025-06-25 14:28:27,992 27956 DEBUG ? odoo.modules.module: module sale_management: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:28:27,992 27956 WARNING ? odoo.modules.graph: module sale_management: not installable, skipped 
+2025-06-25 14:28:27,993 27956 DEBUG ? odoo.modules.module: module portal: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:28:27,993 27956 WARNING ? odoo.modules.graph: module portal: not installable, skipped 
+2025-06-25 14:28:27,993 27956 DEBUG ? odoo.modules.module: module phone_validation: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:28:27,993 27956 WARNING ? odoo.modules.graph: module phone_validation: not installable, skipped 
+2025-06-25 14:28:27,993 27956 DEBUG ? odoo.modules.module: module snailmail: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:28:27,993 27956 WARNING ? odoo.modules.graph: module snailmail: not installable, skipped 
+2025-06-25 14:28:27,994 27956 DEBUG ? odoo.modules.module: module auth_signup: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:28:27,994 27956 WARNING ? odoo.modules.graph: module auth_signup: not installable, skipped 
+2025-06-25 14:28:27,994 27956 DEBUG ? odoo.modules.module: module bus: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:28:27,994 27956 WARNING ? odoo.modules.graph: module bus: not installable, skipped 
+2025-06-25 14:28:27,994 27956 DEBUG ? odoo.modules.module: module spreadsheet_dashboard_sale: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:28:27,994 27956 WARNING ? odoo.modules.graph: module spreadsheet_dashboard_sale: not installable, skipped 
+2025-06-25 14:28:27,995 27956 DEBUG ? odoo.modules.module: module iap: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:28:27,995 27956 WARNING ? odoo.modules.graph: module iap: not installable, skipped 
+2025-06-25 14:28:27,995 27956 DEBUG ? odoo.modules.module: module privacy_lookup: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:28:27,995 27956 WARNING ? odoo.modules.graph: module privacy_lookup: not installable, skipped 
+2025-06-25 14:28:27,995 27956 DEBUG ? odoo.modules.module: module spreadsheet_dashboard_stock_account: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:28:27,995 27956 WARNING ? odoo.modules.graph: module spreadsheet_dashboard_stock_account: not installable, skipped 
+2025-06-25 14:28:27,995 27956 DEBUG ? odoo.modules.module: module digest: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:28:27,996 27956 WARNING ? odoo.modules.graph: module digest: not installable, skipped 
+2025-06-25 14:28:27,996 27956 DEBUG ? odoo.modules.module: module delivery: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:28:27,996 27956 WARNING ? odoo.modules.graph: module delivery: not installable, skipped 
+2025-06-25 14:28:27,996 27956 DEBUG ? odoo.modules.module: module barcodes: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:28:27,996 27956 WARNING ? odoo.modules.graph: module barcodes: not installable, skipped 
+2025-06-25 14:28:27,996 27956 DEBUG ? odoo.modules.module: module web_unsplash: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:28:27,996 27956 WARNING ? odoo.modules.graph: module web_unsplash: not installable, skipped 
+2025-06-25 14:28:27,997 27956 DEBUG ? odoo.modules.module: module payment: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:28:27,997 27956 WARNING ? odoo.modules.graph: module payment: not installable, skipped 
+2025-06-25 14:28:27,997 27956 DEBUG ? odoo.modules.module: module custom_sale_approval_void: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:28:27,997 27956 WARNING ? odoo.modules.graph: module custom_sale_approval_void: not installable, skipped 
+2025-06-25 14:28:27,997 27956 DEBUG ? odoo.modules.module: module partner_autocomplete: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:28:27,997 27956 WARNING ? odoo.modules.graph: module partner_autocomplete: not installable, skipped 
+2025-06-25 14:28:27,998 27956 DEBUG ? odoo.modules.module: module stock_account: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:28:27,998 27956 WARNING ? odoo.modules.graph: module stock_account: not installable, skipped 
+2025-06-25 14:28:27,998 27956 DEBUG ? odoo.modules.module: module mail_bot: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:28:27,998 27956 WARNING ? odoo.modules.graph: module mail_bot: not installable, skipped 
+2025-06-25 14:28:27,998 27956 DEBUG ? odoo.modules.module: module snailmail_account: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:28:27,998 27956 WARNING ? odoo.modules.graph: module snailmail_account: not installable, skipped 
+2025-06-25 14:28:27,998 27956 DEBUG ? odoo.modules.module: module iap_mail: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:28:27,999 27956 WARNING ? odoo.modules.graph: module iap_mail: not installable, skipped 
+2025-06-25 14:28:27,999 27956 DEBUG ? odoo.modules.module: module http_routing: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:28:27,999 27956 WARNING ? odoo.modules.graph: module http_routing: not installable, skipped 
+2025-06-25 14:28:27,999 27956 DEBUG ? odoo.modules.module: module barcodes_gs1_nomenclature: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:28:27,999 27956 WARNING ? odoo.modules.graph: module barcodes_gs1_nomenclature: not installable, skipped 
+2025-06-25 14:28:27,999 27956 DEBUG ? odoo.modules.module: module resource: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:28:27,999 27956 WARNING ? odoo.modules.graph: module resource: not installable, skipped 
+2025-06-25 14:28:28,000 27956 DEBUG ? odoo.modules.module: module account_payment: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:28:28,000 27956 WARNING ? odoo.modules.graph: module account_payment: not installable, skipped 
+2025-06-25 14:28:28,000 27956 DEBUG ? odoo.modules.module: module stock: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:28:28,000 27956 WARNING ? odoo.modules.graph: module stock: not installable, skipped 
+2025-06-25 14:28:28,000 27956 DEBUG ? odoo.modules.module: module base_setup: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:28:28,000 27956 WARNING ? odoo.modules.graph: module base_setup: not installable, skipped 
+2025-06-25 14:28:28,001 27956 DEBUG ? odoo.modules.module: module stock_delivery: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:28:28,001 27956 WARNING ? odoo.modules.graph: module stock_delivery: not installable, skipped 
+2025-06-25 14:28:28,001 27956 DEBUG ? odoo.modules.module: module sale_sms: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:28:28,001 27956 WARNING ? odoo.modules.graph: module sale_sms: not installable, skipped 
+2025-06-25 14:28:28,001 27956 DEBUG ? odoo.modules.module: module web: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:28:28,001 27956 WARNING ? odoo.modules.graph: module web: not installable, skipped 
+2025-06-25 14:28:28,002 27956 DEBUG ? odoo.modules.module: module spreadsheet_dashboard: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:28:28,002 27956 WARNING ? odoo.modules.graph: module spreadsheet_dashboard: not installable, skipped 
+2025-06-25 14:28:28,003 27956 DEBUG ? odoo.modules.module: module spreadsheet_dashboard_account: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:28:28,003 27956 WARNING ? odoo.modules.graph: module spreadsheet_dashboard_account: not installable, skipped 
+2025-06-25 14:28:28,003 27956 DEBUG ? odoo.modules.module: module onboarding: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:28:28,003 27956 WARNING ? odoo.modules.graph: module onboarding: not installable, skipped 
+2025-06-25 14:28:28,003 27956 DEBUG ? odoo.modules.module: module utm: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:28:28,003 27956 WARNING ? odoo.modules.graph: module utm: not installable, skipped 
+2025-06-25 14:28:28,004 27956 DEBUG ? odoo.modules.module: module analytic: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:28:28,004 27956 WARNING ? odoo.modules.graph: module analytic: not installable, skipped 
+2025-06-25 14:28:28,004 27956 DEBUG ? odoo.modules.module: module base_install_request: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:28:28,004 27956 WARNING ? odoo.modules.graph: module base_install_request: not installable, skipped 
+2025-06-25 14:28:28,004 27956 DEBUG ? odoo.modules.module: module account: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:28:28,004 27956 WARNING ? odoo.modules.graph: module account: not installable, skipped 
+2025-06-25 14:28:28,005 27956 DEBUG ? odoo.modules.module: module auth_totp_mail: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:28:28,005 27956 WARNING ? odoo.modules.graph: module auth_totp_mail: not installable, skipped 
+2025-06-25 14:28:28,005 27956 DEBUG ? odoo.modules.module: module base_import: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:28:28,005 27956 WARNING ? odoo.modules.graph: module base_import: not installable, skipped 
+2025-06-25 14:28:28,005 27956 DEBUG ? odoo.modules.module: module quality_control_management: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:28:28,005 27956 WARNING ? odoo.modules.graph: module quality_control_management: not installable, skipped 
+2025-06-25 14:28:28,006 27956 DEBUG ? odoo.modules.module: module account_payment_term: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:28:28,006 27956 WARNING ? odoo.modules.graph: module account_payment_term: not installable, skipped 
+2025-06-25 14:28:28,006 27956 DEBUG ? odoo.modules.module: module account_edi_ubl_cii: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:28:28,006 27956 WARNING ? odoo.modules.graph: module account_edi_ubl_cii: not installable, skipped 
+2025-06-25 14:28:28,006 27956 DEBUG ? odoo.modules.module: module product: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:28:28,006 27956 WARNING ? odoo.modules.graph: module product: not installable, skipped 
+2025-06-25 14:28:28,007 27956 DEBUG ? odoo.modules.module: module sale: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:28:28,007 27956 WARNING ? odoo.modules.graph: module sale: not installable, skipped 
+2025-06-25 14:28:28,007 27956 DEBUG ? odoo.modules.module: module sales_team: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:28:28,007 27956 WARNING ? odoo.modules.graph: module sales_team: not installable, skipped 
+2025-06-25 14:28:28,007 27956 DEBUG ? odoo.modules.module: module uom: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:28:28,007 27956 WARNING ? odoo.modules.graph: module uom: not installable, skipped 
+2025-06-25 14:28:28,007 27956 DEBUG ? odoo.modules.module: module spreadsheet: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:28:28,008 27956 WARNING ? odoo.modules.graph: module spreadsheet: not installable, skipped 
+2025-06-25 14:28:28,008 27956 DEBUG ? odoo.modules.module: module auth_totp: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:28:28,008 27956 WARNING ? odoo.modules.graph: module auth_totp: not installable, skipped 
+2025-06-25 14:28:28,008 27956 DEBUG ? odoo.modules.module: module base_import_module: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:28:28,008 27956 WARNING ? odoo.modules.graph: module base_import_module: not installable, skipped 
+2025-06-25 14:28:28,008 27956 DEBUG ? odoo.modules.module: module web_tour: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:28:28,008 27956 WARNING ? odoo.modules.graph: module web_tour: not installable, skipped 
+2025-06-25 14:28:28,008 27956 DEBUG ? odoo.modules.module: module web_editor: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-06-25 14:28:28,008 27956 WARNING ? odoo.modules.graph: module web_editor: not installable, skipped 
+2025-06-25 14:28:28,009 27956 DEBUG ? odoo.modules.loading: Updating graph with 63 more modules 
+2025-06-25 14:28:28,009 27956 INFO ? odoo.modules.loading: loading 1 modules... 
+2025-06-25 14:28:28,009 27956 INFO ? odoo.modules.loading: 1 modules loaded in 0.00s, 0 queries (+0 extra) 
+2025-06-25 14:28:28,043 27956 ERROR ? odoo.modules.loading: Some modules are not loaded, some dependencies or manifest may be missing: ['account', 'account_edi_ubl_cii', 'account_payment', 'account_payment_term', 'analytic', 'auth_signup', 'auth_totp', 'auth_totp_mail', 'auth_totp_portal', 'barcodes', 'barcodes_gs1_nomenclature', 'base_import', 'base_import_module', 'base_install_request', 'base_setup', 'base_vat', 'bus', 'custom_sale_approval_void', 'delivery', 'digest', 'google_gmail', 'http_routing', 'iap', 'iap_mail', 'l10n_et', 'mail', 'mail_bot', 'onboarding', 'partner_autocomplete', 'payment', 'phone_validation', 'portal', 'privacy_lookup', 'product', 'quality_control_management', 'resource', 'sale', 'sale_async_emails', 'sale_management', 'sale_pdf_quote_builder', 'sale_product_configurator', 'sale_sms', 'sale_stock', 'sales_team', 'sms', 'snailmail', 'snailmail_account', 'spreadsheet', 'spreadsheet_account', 'spreadsheet_dashboard', 'spreadsheet_dashboard_account', 'spreadsheet_dashboard_sale', 'spreadsheet_dashboard_stock_account', 'stock', 'stock_account', 'stock_delivery', 'stock_sms', 'uom', 'utm', 'web', 'web_editor', 'web_tour', 'web_unsplash'] 
+2025-06-25 14:28:28,044 27956 INFO ? odoo.modules.loading: Modules loaded. 
+2025-06-25 14:28:28,047 27956 INFO ? odoo.modules.registry: Registry loaded in 0.126s 
+2025-06-25 14:28:28,049 27956 INFO odoo_dev odoo.addons.base.models.ir_http: Generating routing map for key None 
+2025-06-25 14:28:28,054 27956 INFO odoo_dev werkzeug: 127.0.0.1 - - [25/Jun/2025 14:28:28] "GET /web/login HTTP/1.1" 404 - 18 0.036 0.098
+2025-06-25 14:28:29,795 27956 INFO odoo_dev werkzeug: 127.0.0.1 - - [25/Jun/2025 14:28:29] "GET /web/login HTTP/1.1" 404 - 2 0.000 0.003
+2025-06-25 14:28:30,218 27956 INFO odoo_dev werkzeug: 127.0.0.1 - - [25/Jun/2025 14:28:30] "GET /web/service-worker.js HTTP/1.1" 404 - 2 0.001 0.004
+2025-06-25 14:28:31,748 27956 INFO odoo_dev werkzeug: 127.0.0.1 - - [25/Jun/2025 14:28:31] "GET /web/service-worker.js HTTP/1.1" 404 - 2 0.001 0.003
+2025-06-25 14:29:21,901 27956 DEBUG ? odoo.service.server: cron0 polling for jobs 
+2025-06-25 14:29:23,076 27956 DEBUG ? odoo.service.server: cron1 polling for jobs 
+2025-06-25 14:29:31,056 27956 INFO ? odoo.service.server: Initiating shutdown 
+2025-06-25 14:29:31,056 27956 INFO ? odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2025-06-25 14:29:31,303 27956 DEBUG ? odoo.service.server: current thread: <_MainThread(MainThread, started 29852)> 
+2025-06-25 14:29:31,304 27956 DEBUG ? odoo.service.server: process <_MainThread(MainThread, started 29852)> (False) 
+2025-06-25 14:29:31,304 27956 DEBUG ? odoo.service.server: process <Thread(odoo.service.cron.cron0, started daemon 17452)> (True) 
+2025-06-25 14:29:31,304 27956 DEBUG ? odoo.service.server: process <Thread(odoo.service.cron.cron1, started daemon 8848)> (True) 
+2025-06-25 14:29:31,306 27956 INFO ? odoo.sql_db: ConnectionPool(used=0/count=0/max=64): Closed 3 connections  
+2025-06-25 14:29:31,306 27956 DEBUG ? odoo.service.server: -- 
