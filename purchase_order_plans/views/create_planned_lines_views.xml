@@ -1,29 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-  
+
   <record id="action_create_planned_lines" model="ir.actions.act_window">
     <field name="name">Create Planned Lines</field>
     <field name="res_model">create.planned.lines</field>
-    <field name="view_mode">form</field>
+    <field name="view_mode">tree,form</field>
     <field name="target">new</field>
     <field name="context">{'default_plan_id': active_id}</field>
   </record>
 
- 
   <record id="view_create_planned_lines_form" model="ir.ui.view">
     <field name="name">create.planned.lines.form</field>
     <field name="model">create.planned.lines</field>
     <field name="arch" type="xml">
       <form string="Create Planned Lines">
+        <header>
+          <!-- Statusbar using related plan_state -->
+          <field name="plan_state"
+                 widget="statusbar"
+                 statusbar_visible="draft,scheduled,done"/>
+          <field name="purchase_ordered" invisible="1" />
+          <!-- Button only visible when plan_state is 'scheduled' -->
+          <button name="action_open_convert_wizard"
+                  type="object"
+                  string="Create PO"
+                  class="btn-primary"
+                  invisible="plan_state != 'scheduled' or purchase_ordered" />
+        </header>
         <sheet>
+        <div class="oe_button_box" name="button_box">
+            <button name="view_ordered_products" 
+                    type="object" 
+                    class="oe_stat_button" 
+                    string="products"
+                    icon="fa-shopping-cart">
+                <field name="po_count" string="POs" widget="statinfo"/>
+            </button>
+        </div>
+        
           <group>
-            <field name="plan_id" invisible="1"/>
-            <field name="round_name"/>
-            <field name="vendor_id"/>
-            <field name="currency_id"/>
-            <field name="exchange_rate"/>
-            <field name="container_qty"/>
-            <field name="scheduled_date"/>
+            <group>
+              <field name="plan_id" invisible="1"/>
+              <field name="round_name"/>
+              <field name="vendor_id"/>
+              <field name="currency_id"/>
+              <field name="proforma_no" />
+            </group>
+            <group>
+              <field name="exchange_rate"/>
+              <field name="container_qty"/>
+              <field name="scheduled_date"/>
+              <field name="proforma_attachment"  widget="file" />
+            </group>
           </group>
           <group string="Products">
             <field name="product_line_ids">
@@ -31,6 +59,7 @@
                 <field name="product_id"/>
                 <field name="product_qty"/>
                 <field name="price_unit"/>
+                <field name="line_amount" readonly="1"/>
               </tree>
             </field>
           </group>
@@ -42,4 +71,18 @@
       </form>
     </field>
   </record>
+  <record id="view_create_planned_lines_tree" model="ir.ui.view">
+    <field name="name">create.planned.lines.tree</field>
+    <field name="model">create.planned.lines</field>
+    <field name="arch" type="xml">
+      <tree>
+        <field name="round_name"/>
+        <field name="vendor_id"/>
+        <field name="currency_id"/>
+        <field name="scheduled_date"/>
+        <field name="plan_state" widget="statusbar"/>
+      </tree>
+    </field>
+  </record>
+
 </odoo>

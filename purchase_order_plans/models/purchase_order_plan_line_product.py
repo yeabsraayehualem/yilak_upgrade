@@ -3,7 +3,7 @@ from odoo import models, fields,api
 class PurchaseOrderPlanLineProduct(models.Model):
     _name = 'purchase.order.plan.line.product'
     _description = 'Planned Line Products'
-
+   
     plan_line_id = fields.Many2one('purchase.order.plan.line', ondelete='cascade')
     product_id = fields.Many2one('product.product', string='Product', required=True)
     product_qty = fields.Float(string='Quantity', default=1.0)
