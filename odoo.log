@@ -1,0 +1,144 @@
+2025-06-25 11:26:59,695 30592 DEBUG ? odoo.netsvc: logger level set: "odoo.http.rpc.request:INFO" 
+2025-06-25 11:26:59,695 30592 DEBUG ? odoo.netsvc: logger level set: "odoo.http.rpc.response:INFO" 
+2025-06-25 11:26:59,695 30592 DEBUG ? odoo.netsvc: logger level set: ":INFO" 
+2025-06-25 11:26:59,695 30592 DEBUG ? odoo.netsvc: logger level set: "odoo:DEBUG" 
+2025-06-25 11:26:59,696 30592 DEBUG ? odoo.netsvc: logger level set: "odoo.sql_db:INFO" 
+2025-06-25 11:26:59,696 30592 DEBUG ? odoo.netsvc: logger level set: ":INFO" 
+2025-06-25 11:26:59,697 30592 WARNING ? py.warnings: D:\odoo17\odoo-17\odoo\tools\config.py:576: DeprecationWarning: The longpolling-port is a deprecated alias to the gevent-port option, please use the latter.
+  File "D:\odoo17\odoo-17\odoo-bin", line 8, in <module>
+    odoo.cli.main()
+  File "D:\odoo17\odoo-17\odoo\cli\command.py", line 66, in main
+    o.run(args)
+  File "D:\odoo17\odoo-17\odoo\cli\server.py", line 186, in run
+    main(args)
+  File "D:\odoo17\odoo-17\odoo\cli\server.py", line 133, in main
+    odoo.tools.config.parse_config(args)
+  File "D:\odoo17\odoo-17\odoo\tools\config.py", line 390, in parse_config
+    self._warn_deprecated_options()
+  File "D:\odoo17\odoo-17\odoo\tools\config.py", line 576, in _warn_deprecated_options
+    warnings.warn(
+ 
+2025-06-25 11:26:59,697 30592 INFO ? odoo: Odoo version 17.0 
+2025-06-25 11:26:59,698 30592 INFO ? odoo: Using configuration file at D:\odoo17\odoo-17\conf\odoo.conf 
+2025-06-25 11:26:59,698 30592 INFO ? odoo: addons paths: ['D:\\odoo17\\odoo-17\\odoo\\addons', 'c:\\users\\hp\\appdata\\local\\openerp s.a\\odoo\\addons\\17.0', 'd:\\odoo17\\odoo-17\\conf\\custom_modules\\custom_sale_approval_void\\addons', 'd:\\odoo17\\odoo-17\\conf\\custom_modules\\custom_sale_approval_void\\conf\\custom_modules', 'd:\\odoo17\\odoo-17\\odoo\\addons'] 
+2025-06-25 11:26:59,698 30592 INFO ? odoo: database: odoo_user@localhost:5432 
+2025-06-25 11:27:00,320 30592 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf.exe 
+2025-06-25 11:27:00,953 30592 CRITICAL ? odoo.modules.module: Couldn't load module web 
+2025-06-25 11:27:00,953 30592 ERROR ? odoo.service.server: Failed to load server-wide module `web`.
+The `web` module is provided by the addons found in the `openerp-web` project.
+Maybe you forgot to add those addons in your addons_path configuration. 
+Traceback (most recent call last):
+  File "D:\odoo17\odoo-17\odoo\service\server.py", line 1310, in load_server_wide_modules
+    odoo.modules.module.load_openerp_module(m)
+  File "D:\odoo17\odoo-17\odoo\modules\module.py", line 395, in load_openerp_module
+    __import__(qualname)
+ModuleNotFoundError: No module named 'odoo.addons.web'
+2025-06-25 11:27:00,955 30592 DEBUG ? odoo.service.server: Setting signal handlers 
+2025-06-25 11:27:00,960 30592 DEBUG ? odoo.service.server: cron0 started! 
+2025-06-25 11:27:00,962 30592 DEBUG ? odoo.service.server: cron1 started! 
+2025-06-25 11:27:00,975 30592 INFO ? odoo.service.server: HTTP service (werkzeug) running on SoloAk-Envy:8069 
+2025-06-25 11:28:01,054 30592 DEBUG ? odoo.service.server: cron0 polling for jobs 
+2025-06-25 11:28:02,120 30592 DEBUG ? odoo.service.server: cron1 polling for jobs 
+2025-06-25 11:28:04,576 30592 INFO ? odoo.service.server: Initiating shutdown 
+2025-06-25 11:28:04,576 30592 INFO ? odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2025-06-25 11:28:04,871 30592 DEBUG ? odoo.service.server: current thread: <_MainThread(MainThread, started 24956)> 
+2025-06-25 11:28:04,871 30592 DEBUG ? odoo.service.server: process <_MainThread(MainThread, started 24956)> (False) 
+2025-06-25 11:28:04,871 30592 DEBUG ? odoo.service.server: process <Thread(odoo.service.cron.cron0, started daemon 23796)> (True) 
+2025-06-25 11:28:04,871 30592 DEBUG ? odoo.service.server: process <Thread(odoo.service.cron.cron1, started daemon 30704)> (True) 
+2025-06-25 11:28:04,872 30592 INFO ? odoo.sql_db: ConnectionPool(used=0/count=0/max=64): Closed 2 connections  
+2025-06-25 11:28:04,874 30592 DEBUG ? odoo.service.server: -- 
+2025-06-25 11:28:09,463 27080 DEBUG ? odoo.netsvc: logger level set: "odoo.http.rpc.request:INFO" 
+2025-06-25 11:28:09,465 27080 DEBUG ? odoo.netsvc: logger level set: "odoo.http.rpc.response:INFO" 
+2025-06-25 11:28:09,465 27080 DEBUG ? odoo.netsvc: logger level set: ":INFO" 
+2025-06-25 11:28:09,465 27080 DEBUG ? odoo.netsvc: logger level set: "odoo:DEBUG" 
+2025-06-25 11:28:09,465 27080 DEBUG ? odoo.netsvc: logger level set: "odoo.sql_db:INFO" 
+2025-06-25 11:28:09,465 27080 DEBUG ? odoo.netsvc: logger level set: ":INFO" 
+2025-06-25 11:28:09,466 27080 WARNING ? py.warnings: D:\odoo17\odoo-17\odoo\tools\config.py:576: DeprecationWarning: The longpolling-port is a deprecated alias to the gevent-port option, please use the latter.
+  File "D:\odoo17\odoo-17\odoo-bin", line 8, in <module>
+    odoo.cli.main()
+  File "D:\odoo17\odoo-17\odoo\cli\command.py", line 66, in main
+    o.run(args)
+  File "D:\odoo17\odoo-17\odoo\cli\server.py", line 186, in run
+    main(args)
+  File "D:\odoo17\odoo-17\odoo\cli\server.py", line 133, in main
+    odoo.tools.config.parse_config(args)
+  File "D:\odoo17\odoo-17\odoo\tools\config.py", line 390, in parse_config
+    self._warn_deprecated_options()
+  File "D:\odoo17\odoo-17\odoo\tools\config.py", line 576, in _warn_deprecated_options
+    warnings.warn(
+ 
+2025-06-25 11:28:09,466 27080 INFO ? odoo: Odoo version 17.0 
+2025-06-25 11:28:09,466 27080 INFO ? odoo: Using configuration file at D:\odoo17\odoo-17\conf\odoo.conf 
+2025-06-25 11:28:09,466 27080 INFO ? odoo: addons paths: ['D:\\odoo17\\odoo-17\\odoo\\addons', 'c:\\users\\hp\\appdata\\local\\openerp s.a\\odoo\\addons\\17.0', 'd:\\odoo17\\odoo-17\\conf\\custom_modules\\custom_sale_approval_void\\addons', 'd:\\odoo17\\odoo-17\\conf\\custom_modules\\custom_sale_approval_void\\conf\\custom_modules', 'd:\\odoo17\\odoo-17\\odoo\\addons'] 
+2025-06-25 11:28:09,467 27080 INFO ? odoo: database: odoo_user@localhost:5432 
+2025-06-25 11:28:09,659 27080 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf.exe 
+2025-06-25 11:28:09,842 27080 CRITICAL ? odoo.modules.module: Couldn't load module web 
+2025-06-25 11:28:09,842 27080 ERROR ? odoo.service.server: Failed to load server-wide module `web`.
+The `web` module is provided by the addons found in the `openerp-web` project.
+Maybe you forgot to add those addons in your addons_path configuration. 
+Traceback (most recent call last):
+  File "D:\odoo17\odoo-17\odoo\service\server.py", line 1310, in load_server_wide_modules
+    odoo.modules.module.load_openerp_module(m)
+  File "D:\odoo17\odoo-17\odoo\modules\module.py", line 395, in load_openerp_module
+    __import__(qualname)
+ModuleNotFoundError: No module named 'odoo.addons.web'
+2025-06-25 11:28:09,843 27080 DEBUG ? odoo.service.server: Setting signal handlers 
+2025-06-25 11:28:09,845 27080 DEBUG ? odoo.service.server: cron0 started! 
+2025-06-25 11:28:09,846 27080 DEBUG ? odoo.service.server: cron1 started! 
+2025-06-25 11:28:09,851 27080 INFO ? odoo.service.server: HTTP service (werkzeug) running on SoloAk-Envy:8069 
+2025-06-25 11:29:08,666 27080 INFO ? odoo.service.server: Initiating shutdown 
+2025-06-25 11:29:08,666 27080 INFO ? odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2025-06-25 11:29:09,125 27080 DEBUG ? odoo.service.server: current thread: <_MainThread(MainThread, started 10728)> 
+2025-06-25 11:29:09,125 27080 DEBUG ? odoo.service.server: process <_MainThread(MainThread, started 10728)> (False) 
+2025-06-25 11:29:09,125 27080 DEBUG ? odoo.service.server: process <Thread(odoo.service.httpd, started daemon 23004)> (True) 
+2025-06-25 11:29:09,125 27080 DEBUG ? odoo.service.server: process <Thread(odoo.service.cron.cron0, started daemon 29340)> (True) 
+2025-06-25 11:29:09,125 27080 DEBUG ? odoo.service.server: process <Thread(odoo.service.cron.cron1, started daemon 14760)> (True) 
+2025-06-25 11:29:09,126 27080 INFO ? odoo.sql_db: ConnectionPool(used=0/count=0/max=64): Closed 2 connections  
+2025-06-25 11:29:09,126 27080 DEBUG ? odoo.service.server: -- 
+2025-06-25 11:29:13,494 22772 DEBUG ? odoo.netsvc: logger level set: "odoo.http.rpc.request:INFO" 
+2025-06-25 11:29:13,494 22772 DEBUG ? odoo.netsvc: logger level set: "odoo.http.rpc.response:INFO" 
+2025-06-25 11:29:13,494 22772 DEBUG ? odoo.netsvc: logger level set: ":INFO" 
+2025-06-25 11:29:13,494 22772 DEBUG ? odoo.netsvc: logger level set: "odoo:DEBUG" 
+2025-06-25 11:29:13,494 22772 DEBUG ? odoo.netsvc: logger level set: "odoo.sql_db:INFO" 
+2025-06-25 11:29:13,494 22772 DEBUG ? odoo.netsvc: logger level set: ":INFO" 
+2025-06-25 11:29:13,496 22772 WARNING ? py.warnings: D:\odoo17\odoo-17\odoo\tools\config.py:576: DeprecationWarning: The longpolling-port is a deprecated alias to the gevent-port option, please use the latter.
+  File "D:\odoo17\odoo-17\odoo-bin", line 8, in <module>
+    odoo.cli.main()
+  File "D:\odoo17\odoo-17\odoo\cli\command.py", line 66, in main
+    o.run(args)
+  File "D:\odoo17\odoo-17\odoo\cli\server.py", line 186, in run
+    main(args)
+  File "D:\odoo17\odoo-17\odoo\cli\server.py", line 133, in main
+    odoo.tools.config.parse_config(args)
+  File "D:\odoo17\odoo-17\odoo\tools\config.py", line 390, in parse_config
+    self._warn_deprecated_options()
+  File "D:\odoo17\odoo-17\odoo\tools\config.py", line 576, in _warn_deprecated_options
+    warnings.warn(
+ 
+2025-06-25 11:29:13,496 22772 INFO ? odoo: Odoo version 17.0 
+2025-06-25 11:29:13,496 22772 INFO ? odoo: Using configuration file at D:\odoo17\odoo-17\conf\odoo.conf 
+2025-06-25 11:29:13,496 22772 INFO ? odoo: addons paths: ['D:\\odoo17\\odoo-17\\odoo\\addons', 'c:\\users\\hp\\appdata\\local\\openerp s.a\\odoo\\addons\\17.0', 'd:\\odoo17\\odoo-17\\conf\\custom_modules\\custom_sale_approval_void\\addons', 'd:\\odoo17\\odoo-17\\conf\\custom_modules\\custom_sale_approval_void\\conf\\custom_modules', 'd:\\odoo17\\odoo-17\\odoo\\addons'] 
+2025-06-25 11:29:13,497 22772 INFO ? odoo: database: odoo_user@localhost:5432 
+2025-06-25 11:29:13,725 22772 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf.exe 
+2025-06-25 11:29:13,966 22772 CRITICAL ? odoo.modules.module: Couldn't load module web 
+2025-06-25 11:29:13,966 22772 ERROR ? odoo.service.server: Failed to load server-wide module `web`.
+The `web` module is provided by the addons found in the `openerp-web` project.
+Maybe you forgot to add those addons in your addons_path configuration. 
+Traceback (most recent call last):
+  File "D:\odoo17\odoo-17\odoo\service\server.py", line 1310, in load_server_wide_modules
+    odoo.modules.module.load_openerp_module(m)
+  File "D:\odoo17\odoo-17\odoo\modules\module.py", line 395, in load_openerp_module
+    __import__(qualname)
+ModuleNotFoundError: No module named 'odoo.addons.web'
+2025-06-25 11:29:13,967 22772 DEBUG ? odoo.service.server: Setting signal handlers 
+2025-06-25 11:29:13,969 22772 DEBUG ? odoo.service.server: cron0 started! 
+2025-06-25 11:29:13,969 22772 DEBUG ? odoo.service.server: cron1 started! 
+2025-06-25 11:29:13,978 22772 INFO ? odoo.service.server: HTTP service (werkzeug) running on SoloAk-Envy:8069 
+2025-06-25 11:29:18,568 22772 INFO ? odoo.service.server: Initiating shutdown 
+2025-06-25 11:29:18,568 22772 INFO ? odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2025-06-25 11:29:18,577 22772 DEBUG ? odoo.service.server: current thread: <_MainThread(MainThread, started 19180)> 
+2025-06-25 11:29:18,577 22772 DEBUG ? odoo.service.server: process <_MainThread(MainThread, started 19180)> (False) 
+2025-06-25 11:29:18,577 22772 DEBUG ? odoo.service.server: process <Thread(odoo.service.cron.cron0, started daemon 8912)> (True) 
+2025-06-25 11:29:18,577 22772 DEBUG ? odoo.service.server: process <Thread(odoo.service.cron.cron1, started daemon 17304)> (True) 
+2025-06-25 11:29:18,577 22772 INFO ? odoo.sql_db: ConnectionPool(used=0/count=0/max=64): Closed 2 connections  
+2025-06-25 11:29:18,578 22772 DEBUG ? odoo.service.server: -- 

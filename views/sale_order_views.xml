@@ -1,32 +1,53 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <odoo>
     <record id="view_order_form_custom" model="ir.ui.view">
         <field name="name">sale.order.form.custom</field>
         <field name="model">sale.order</field>
         <field name="inherit_id" ref="sale.view_order_form"/>
         <field name="arch" type="xml">
-            <!-- Add the approval_requested field to the view -->
-            <sheet position="inside">
-                <field name="approval_requested" invisible="1"/>
-            </sheet>
-            <!-- Add Request Approval and Approve Buttons -->
-            <header position="inside">
-                <button
-                    name="action_request_approval"
-                    string="Request Approval"
-                    type="object"
-                    class="oe_highlight"
-                    invisible="state != 'draft' or approval_requested"
-                />
-                <button
-                    name="action_approve"
-                    string="Approve"
-                    type="object"
-                    class="oe_highlight"
-                    groups="custom_sale_approval_void.group_sales_approval_manager"
-                    invisible="not approval_requested or state != 'draft'"
-                />
-            </header>
+            <xpath expr="//sheet" position="inside">
+                <group>
+                    <field name="approval_requested" invisible="True"/>
+                    <field name="approved_by" readonly="1"/>
+                    <field name="approved_on" readonly="1"/>
+                    <field name="invoice_ids" invisible="True"/>
+                  <field name="picking_ids" invisible="1"/>
+                </group>
+            </xpath>
+
+            <xpath expr="//header" position="inside">
+                <button name="action_request_approval"
+                        string="Request Approval"
+                        type="object"
+                        class="oe_highlight"
+                        invisible="state != 'draft' or approval_requested"/>
+
+                <button name="action_approve"
+                        string="Approve"
+                        type="object"
+                        class="oe_highlight"
+                        groups="custom_sale_approval_void.group_sales_approval_manager"
+                        invisible="not approval_requested or state != 'draft'"/>
+
+                <!--        <button name="action_void_delivery"-->
+                <!--                string="Void Delivery"-->
+                <!--                type="object"-->
+                <!--                class="btn-danger"-->
+                <!--                groups="custom_sale_approval_void.group_sales_approval_manager"-->
+                <!--                invisible="state != 'sale'"/>-->
+
+                <!--        <button name="action_void_invoice"-->
+                <!--                string="Void Invoice"-->
+                <!--                type="object"-->
+                <!--                class="btn-danger"-->
+                <!--                groups="custom_sale_approval_void.group_sales_approval_manager"-->
+                <!--                invisible="not invoice_ids or state != 'sale'"/>-->
+                <button name="action_void_all"
+                        string="Void"
+                        type="object"
+                        class="btn-danger"
+                        groups="custom_sale_approval_void.group_sales_approval_manager"
+                        invisible="state != 'sale' or (not invoice_ids and not picking_ids)"/>
+            </xpath>
         </field>
     </record>
 </odoo>
